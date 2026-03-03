@@ -1,0 +1,10 @@
+# auth to call model gateway
+auth:
+  token_url: "https://www.example.com/oauth2/v1/token"
+  token_scope: "http://www.example.com/v1/scope"
+  token_basic_auth: "base64(CLIENT_ID:CLIENT_SECRET)"
+
+# Model gateway (OpenAI-compatible) settings
+model_gateway:
+  base_url: "https://www.example.com/openai/deployments/xyz-gpt-4.1-2025-04-14"
+  api_version: "2024-10-21"
