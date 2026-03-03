@@ -1,21 +1,23 @@
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
-[project.scripts]
-ria = "ria.ria:main_entry_point"
-
 [project]
-name = "ria"
+name = "rgai"
 version = "0.1.0"
-description = "knowledge-Rich Intelligent Agents (RIA) - A Multi-Agent AI System"
+description = "A Multi-Agent AI System"
 requires-python = ">=3.12"
 dependencies = [
     "langchain_mcp_adapters",
     "langchain_ollama",
+    "langchain_openai",
     "deepagents",
     "streamlit",
-    "oci",
-    "jupyter",
-    "ipykernel",
+    "oci"
 ]
+
+[project.scripts]
+rgai = "rgai.core.supervisor:entry_point"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

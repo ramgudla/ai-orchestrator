@@ -1,0 +1,28 @@
+{
+    "subagents": [
+        "devops",
+        "atlassian",
+        "math"
+    ],
+    "subagents_capabilities": {
+        "devops": "read metrics, read logs, download logs from devops server. Use this when the user wants to read logs, read metrics, download logs, loook for canaries etc from mc_devops server. input_example: Natural language devops request (e.g., 'Find the metrics that are emitting 4xx or 5xx errors in RG project for the last 2 hours')",
+        "atlassian": "read, update comments, re-assign jira issues. input_example: Natural language request related to jira issue (e.g., 'Get the details of jira id RG-3552 from the RG project queue')",
+        "math": "addition, multiplication, division operations. input_example: Natural language request related to mathematical operation (e.g., 'Can you calculate 25 multiplied by 4 and then divided by 2?')"
+    },
+    "subagents_prompts": {
+        "devops": "You are specialized agent to provide the following information.\nYou can search logs via lumnerjack, download logs, get shepherd flocks and shepherd releases, read metrics, get alarms, and loook for canary status.\n",
+        "atlassian": "You are specialized agent to Get details of a specific Jira issue from a jira queue.\nYou can also read and update comments.\n",
+        "math": "You are a math agent. You can perform basic arithmetic operations like addition, multiplication, and division.\n"
+    },
+    "supervisor_prompt": "You are a SIMPLE ROUTER with one final summary task.\n    Based on the user request, respond with the tool one should use to help you with the request.\n    Guidelines:\n    1. Always check the last message in the conversation to determine if the task has been completed.\n    2. If the task is complete, you might return the result to the user.\n    3. If the task is not complete, you would select appropriate tool and continue the workflow until completion.\n    4. If you have the final answer or outcome, summarize it and close the workflow.\n",
+    "mcpServers": {
+    
+        "mcp-math": {
+            "command": "python",
+            "args": [
+                "scratch/mcp_server.py"
+            ],
+            "transport": "stdio"
+        }
+    }
+}
