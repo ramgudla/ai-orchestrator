@@ -1,6 +1,13 @@
 ## Pre-requisites
 
-### TLDR
+Once you have received a user id and password, add a file called `.env` at this level with the following content:
+
+```env
+OPEN_AI_PROXY_USER=...
+OPEN_AI_PROXY_PASSWORD=...
+```
+
+### TL;DR
 ```bash
 uv venv --python 3.13
 source .venv/bin/activate
