@@ -1,6 +1,7 @@
 ### Pre-requisites
 
 # TLDR
+```
 uv venv --python 3.13
 source .venv/bin/activate
 
@@ -12,6 +13,7 @@ Uninstall a package   :   uv pip uninstall rgai
 
 # Install UV
 We recommend installing uv globally with pip:
+```
 
 ```
 pip install uv
