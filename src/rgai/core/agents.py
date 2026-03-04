@@ -59,7 +59,7 @@ def _create_subagent_as_tool(subagent: str = None):
     # An LLM Agent runs tools in a loop to achieve a goal.
     agent = create_agent(
         model=llm,
-        tools=tools[f"mcp-{subagent}"] if f"mcp-{subagent}" in tools.keys() else [],
+        tools=tools[f"{subagent}_mcp"] if f"{subagent}_mcp" in tools.keys() else [],
         system_prompt=SUBAGENTS_PROMPTS[subagent]
     )
     agent_as_tool =  export_agent_as_tool(
@@ -94,7 +94,7 @@ def _create_subagent(subagent: str = None):
         "name": f"{subagent}_subagent",
         "description": SUBAGENTS_CAPABILITIES[subagent],
         "system_prompt": SUBAGENTS_PROMPTS[subagent],
-        "tools": tools[f"mcp-{subagent}"] if f"mcp-{subagent}" in tools.keys() else [],
+        "tools": tools[f"{subagent}_mcp"] if f"{subagent}_mcp" in tools.keys() else [],
     }
 
     return subagent_config
