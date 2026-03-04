@@ -16,8 +16,7 @@
     },
     "supervisor_prompt": "You are a SIMPLE ROUTER with one final summary task.\n    Based on the user request, respond with the tool one should use to help you with the request.\n    Guidelines:\n    1. Always check the last message in the conversation to determine if the task has been completed.\n    2. If the task is complete, you might return the result to the user.\n    3. If the task is not complete, you would select appropriate tool and continue the workflow until completion.\n    4. If you have the final answer or outcome, summarize it and close the workflow.\n",
     "mcpServers": {
-    
-        "mcp-math": {
+        "math_mcp": {
             "command": "python",
             "args": [
                 "scratch/mcp_server.py"
