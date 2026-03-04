@@ -1,8 +1,10 @@
 ## Pre-requisites
 
-Once you have received a user id and password, add a file called `.env` at this level with the following content:
+Add a file called `.env` at this level with the following content:
 
 ```env
+OAUTH_CLIENT_ID=...
+OAUTH_CLIENT_SECRET=...
 OPEN_AI_PROXY_USER=...
 OPEN_AI_PROXY_PASSWORD=...
 ```
@@ -12,8 +14,10 @@ OPEN_AI_PROXY_PASSWORD=...
 uv venv --python 3.13
 source .venv/bin/activate
 
+Clean uv cache        :   uv clean
 Build a wheel         :   uv build
 Test a wheel          :   uvx dist/rgai-0.1.0-py3-none-any.whl
+Oneliner              :   uv clean; uv build; uvx dist/rgai-0.1.0-py3-none-any.whl
 
 Install a wheel       :   uv pip install dist/rgai-0.1.0-py3-none-any.whl
 Uninstall a package   :   uv pip uninstall rgai
