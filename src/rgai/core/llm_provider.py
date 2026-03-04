@@ -11,7 +11,7 @@ from rgai.auth.auth import get_api_key
 
 load_dotenv()
 
-cfg = load_yaml("config/model_config.yaml")
+cfg = load_yaml("config/models_config.yaml")
 
 def getChatOpenAIModel() -> ChatOpenAI:
     
