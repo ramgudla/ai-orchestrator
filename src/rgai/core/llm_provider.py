@@ -82,5 +82,5 @@ class LLMFactory:
         elif (provider.lower() == "oci"):
             return getChatOCIGenAIModel()
         else:
-            raise ValueError(f"Unsupported provider '{provider}'. Supported providers: ollama, openai, oci")
+            raise ValueError(f"Unsupported provider '{provider}'. Supported providers: local, openai, oci")
     
