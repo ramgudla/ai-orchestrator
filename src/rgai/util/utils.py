@@ -16,17 +16,17 @@ async def get_tools_by_server_name(mcpServers) -> Dict[str, List[BaseTool]]:
         tools_by_server[server_name] = tools
     return tools_by_server
 
-def get_tools(MCPSERVERS):
+def get_tools(mcpServers):
     try:
         loop = asyncio.get_running_loop()
     except RuntimeError:
         # No running loop, so create and run a new one
         # print("No running loop found, creating a new one.")
-        return asyncio.run(get_tools_by_server_name(MCPSERVERS))
+        return asyncio.run(get_tools_by_server_name(mcpServers))
     else:
         # Loop is running, use run_until_complete
         # print("Running loop found, using run_until_complete.")
-        return loop.run_until_complete(get_tools_by_server_name(MCPSERVERS))
+        return loop.run_until_complete(get_tools_by_server_name(mcpServers))
 
 # Helper function to recursively extract 'content' from all AIMessage instances
 def extract_ai_message_content(stream) -> List[str]:
