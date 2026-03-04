@@ -24,5 +24,6 @@
             ],
             "transport": "stdio"
         }
-    }
+    },
+    "model_provider": "openai"
 }
