@@ -1,19 +1,22 @@
 [project]
-name = "rgai"
+name = "aio"
 version = "0.1.0"
-description = "A Multi-Agent AI System"
+description = "AI Orchestrator built with LangChain and DeepAgents"
 requires-python = ">=3.12"
 dependencies = [
     "langchain_mcp_adapters",
     "langchain_ollama",
     "langchain_openai",
+    "langchain_community",
     "deepagents",
     "streamlit",
-    "oci"
+    "oci",
+    "rich"
 ]
 
 [project.scripts]
-rgai = "rgai.core.supervisor:entry_point"
+aio_cli = "aio.core.cli:main"
+aio_bot = "aio.core.supervisor:main"
 
 [build-system]
 requires = ["setuptools", "wheel"]
