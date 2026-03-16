@@ -70,7 +70,7 @@ pip install setuptools wheel build
 
 1) Build your package.
  ```
- cd ai-orchestrator
+ cd aio
  uv build
 
  
