@@ -10,13 +10,11 @@ dependencies = [
     "langchain_community",
     "deepagents",
     "streamlit",
-    "oci",
-    "rich"
+    "oci"
 ]
 
 [project.scripts]
-aio_cli = "aio.core.cli:main"
-aio_bot = "aio.core.supervisor:main"
+aio_bot = "aio.core.cli:main"
 
 [build-system]
 requires = ["setuptools", "wheel"]
