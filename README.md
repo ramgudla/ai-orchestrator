@@ -166,7 +166,7 @@ The following executables are available:
 
     ```- aio_cli```  
 
-Use uvx --from aio <EXECUTABLE-NAME> instead.
+Use ```uvx --from aio <EXECUTABLE-NAME>``` instead.
 
 **Resolution:**
 uvx dist/aio-0.1.0-py3-none-any.whl installs the wheel, then (because no command name follows) tries to execute a console script named ```aio``` (the project name). That script doesn’t exist in the wheel, so uvx prints the reminder that only ```aio_cli``` is exposed.
