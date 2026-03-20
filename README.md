@@ -159,13 +159,12 @@ e.g., pip install -i http://localhost:3141/root/dev/+simple/ aio --verbose
 
 When you run below commands from workspace root, you will observe errors outlined below:
 
-1) ```uvx dist/aio-0.1.0-py3-none-any.whl```
-Installed 120 packages in 878ms
-An executable named ```aio``` is not provided by package aio.
-The following executables are available:
+1) ```uvx dist/aio-0.1.0-py3-none-any.whl```  
+Installed 120 packages in 878ms  
+An executable named ```aio``` is not provided by package aio.  
+The following executables are available:  
 
-    ```- aio_cli```
-
+    ```- aio_cli```  
 
 Use uvx --from aio <EXECUTABLE-NAME> instead.
 
@@ -174,8 +173,8 @@ uvx dist/aio-0.1.0-py3-none-any.whl installs the wheel, then (because no command
 Tell uvx which script you want: e.g. ```uvx --from dist/aio-0.1.0-py3-none-any.whl aio_cli```.
 If you’re already in the project tree, an easier option is ```uv run aio_cli```; uv will reuse the local project rather than reinstalling from the wheel.
 
-2) ```uvx --from aio aio_cli```
-  × No solution found when resolving tool dependencies:
+2) ```uvx --from aio aio_cli```  
+  × No solution found when resolving tool dependencies:  
   ╰─▶ Because there are no versions of aio and you require aio, we can conclude that your requirements are unsatisfiable.
 
 **Resolution:**
